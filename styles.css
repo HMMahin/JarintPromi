@@ -1,0 +1,161 @@
+/* Default styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height */
+    background-color: rgb(255, 0, 89);
+    margin: 0; /* Remove default margin */
+    text-align: center;
+    position: relative;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.header_text {
+    font-family: 'Nunito', sans-serif; /* Corrected font family */
+    font-size: 2em; /* Default font size */
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    margin: 20px 0;
+}
+
+.gif_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+.btn {
+    background-color: #fffbfb;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 1em;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+}
+
+#noButton {
+    position: absolute;
+    transition: 0.5s;
+}
+
+#yesButton {
+    position: absolute;
+}
+
+/* Media query for small phones (max-width: 600px) */
+@media (max-width: 600px) {
+    body {
+        flex-direction: column;
+    }
+
+    .header_text {
+        font-size: 1.5em; /* Smaller font size */
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        padding: 10px 20px; /* Smaller padding */
+        font-size: 0.9em; /* Smaller font size */
+    }
+
+    #noButton, #yesButton {
+        position: relative; /* Relative positioning for easier layout */
+        margin: 10px 0;
+    }
+}
+
+/* Media query for tablets (min-width: 601px) and (max-width: 768px) */
+@media (min-width: 601px) and (max-width: 768px) {
+    body {
+        flex-direction: column;
+        height: 90vh; /* Adjust height for tablets */
+    }
+
+    .header_text {
+        font-size: 1.8em; /* Slightly smaller font size */
+    }
+
+    .buttons {
+        flex-direction: row;
+    }
+
+    .btn {
+        padding: 12px 28px; /* Adjusted padding */
+        font-size: 1em; /* Adjusted font size */
+    }
+
+    #noButton, #yesButton {
+        position: relative; /* Relative positioning for easier layout */
+        margin: 10px 5px;
+    }
+}
+
+/* Media query for desktops (min-width: 769px) and (max-width: 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    body {
+        height: 80vh; /* Adjust height for desktops */
+    }
+
+    .header_text {
+        font-size: 2em; /* Adjusted font size */
+    }
+
+    .buttons {
+        flex-direction: row;
+    }
+
+    .btn {
+        padding: 14px 30px; /* Adjusted padding */
+        font-size: 1em; /* Default font size */
+    }
+
+    #noButton, #yesButton {
+        position: relative; /* Relative positioning */
+        margin: 10px 5px;
+    }
+}
+
+/* Media query for larger desktops (min-width: 1025px) */
+@media (min-width: 1025px) {
+    body {
+        height: 70vh; /* Default height */
+    }
+
+    .header_text {
+        font-size: 2em; /* Default font size */
+    }
+
+    .buttons {
+        flex-direction: row;
+    }
+
+    .btn {
+        padding: 15px 32px; /* Default padding */
+        font-size: 1em; /* Default font size */
+    }
+
+    #noButton, #yesButton {
+        position: relative; /* Relative positioning */
+        margin: 10px 5px;
+    }
+}
